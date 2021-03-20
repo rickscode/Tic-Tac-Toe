@@ -1,7 +1,7 @@
 // if one thing use modules e.g gameboard or displayController
 // if need multiples e.g players use factory functions
 
-// Can choose a spot on the board with player O the spot displays an O
+// Can only choose first spot on the board with player O the spot displays an O
 // and the first index in boardArray also become that value
 // need a game flow function that controls the game in or
 // player take turns 
@@ -15,11 +15,13 @@ const gameBoard = (() => {
 function displayGame(item) {
     const boardContainer = document.querySelector(".board-container");
     let gameSquare = document.createElement("div");
+    gameSquare.className = "squares"
     gameSquare.id = "square";
     gameSquare.textContent = item;
     boardContainer.appendChild(gameSquare);
     
 } 
+
 console.log(boardArray);
 return {boardArray};
 })();
@@ -31,14 +33,15 @@ const Player = (value) => {
 
     // gameboard square selection function
     const choose = () => {
-        const boardContainer = document.getElementById("square");
+        const boardContainer = document.querySelector(".board-container");
         boardContainer.addEventListener("click", placeX);
         // place X on chosen square   
         function placeX(e) {
-            if (e.target.id === "square") {
-                e.target.textContent = value;
-                gameBoard.boardArray[0] = value;
-                console.log(gameBoard.boardArray)
+            if (e.target.id == "square") {
+                console.log(e.target);
+                // gameBoard.boardArray[0] = value;
+                // e.target.textContent = gameBoard.boardArray[0];
+                // console.log(gameBoard.boardArray)
             } 
         }
         
