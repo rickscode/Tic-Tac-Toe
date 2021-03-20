@@ -2,49 +2,54 @@
 // if need multiples e.g players use factory functions
 
 
+
 // gameBoard module iife
 const gameBoard = (() => {
-    let board = [1,2,3,4,5,6,7,8,9];
-    board.forEach(displayGame);
-    
-
+    const boardArray = [1,2,3,4,5,6,7,8,9];
+    boardArray.forEach(displayGame);
     
 function displayGame(item) {
     const boardContainer = document.querySelector(".board-container");
-    
-    
-    
     let gameSquare = document.createElement("div");
     gameSquare.id = "square";
     gameSquare.textContent = item;
     boardContainer.appendChild(gameSquare);
-
-}
-
+    
+} 
+console.log(boardArray);
+return {boardArray};
 })();
 
 
 // player factory function
 const Player = (value) => {
     const playerValue = () => value;
-    chooseSquare();
 
     // gameboard square selection function
-    function chooseSquare() {
+    const choose = () => {
         const boardContainer = document.getElementById("square");
         boardContainer.addEventListener("click", placeX);
         // place X on chosen square   
-        function placeX(e){
-            if(e.target.id === "square"){
+        function placeX(e) {
+            if (e.target.id === "square") {
                 e.target.textContent = value;
-            }
+                gameBoard.boardArray[0] = value;
+                console.log(gameBoard.boardArray)
+            } 
         }
-    }
-    
+        
+    } 
+    // closure
+    return {choose}
 } 
 
+
 const playerX = Player("X");
-const PlayerO = Player("O");
+const playerO = Player("O");
+
+playerO.choose();
+
+
 
 
 
