@@ -18,16 +18,15 @@ function displayGame(item) {
     gameSquare.id = "square";
     gameSquare.textContent = item;
     boardContainer.appendChild(gameSquare);
-    
 
-    
 }
 
 })();
 
-// player X turn function
-const playerX = () => {
-    let value = "X";
+
+// player factory function
+const Player = (value) => {
+    const playerValue = () => value;
     chooseSquare();
 
     // gameboard square selection function
@@ -37,14 +36,19 @@ const playerX = () => {
         // place X on chosen square   
         function placeX(e){
             if(e.target.id === "square"){
-                e.target.textContent = "X";
+                e.target.textContent = value;
             }
         }
     }
     
-    
+} 
 
-}
+const playerX = Player("X");
+const PlayerO = Player("O");
 
-playerX();
+
+
+
+
+
 
