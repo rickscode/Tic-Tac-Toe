@@ -1,7 +1,11 @@
 // if one thing use modules e.g gameboard or displayController
 // if need multiples e.g players use factory functions
 
-
+// Can choose a spot on the board with player O the spot displays an O
+// and the first index in boardArray also become that value
+// need a game flow function that controls the game in or
+// player take turns 
+// need a function to check winning conditions also
 
 // gameBoard module iife
 const gameBoard = (() => {
