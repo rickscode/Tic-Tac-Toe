@@ -34,14 +34,14 @@ const Player = (value) => {
     // gameboard square selection function
     const choose = () => {
         const boardContainer = document.querySelector(".board-container");
-        boardContainer.addEventListener("click", placeX);
+        boardContainer.addEventListener("click", placeMarker);
         // place X on chosen square   
-        function placeX(e) {
+        function placeMarker(e) {
             if (e.target.id == "square") {
                 console.log(e.target);
-                // gameBoard.boardArray[0] = value;
-                // e.target.textContent = gameBoard.boardArray[0];
-                // console.log(gameBoard.boardArray)
+                gameBoard.boardArray[0] = value;
+                e.target.textContent = gameBoard.boardArray[0];
+                console.log(gameBoard.boardArray)
             } 
         }
         
@@ -49,15 +49,19 @@ const Player = (value) => {
     // closure
     return {choose}
 } 
+///////////////////////////////TESTING GROUND///////////////////////////////////////
 
-
+// playgame function
+function playGame(){
 const playerX = Player("X");
 const playerO = Player("O");
+// start game
 
-playerO.choose();
+    playerX.choose();
 
+}
 
-
+playGame()
 
 
 
