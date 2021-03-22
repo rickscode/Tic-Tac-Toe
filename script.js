@@ -108,47 +108,72 @@ changeBoardArrayValue.addEventListener("click", placeMarker);
 
 function placeMarker(e) {
   // check player turn
-  checkTurn();
+  
   // need to not allow multiple selections on the same square
   
   switch(e.target.id) {
        case "square-one":
-         gameBoard.boardArray[0] = playerTurn;
-          
-           console.log(playerTurn)
-                     console.log(gameBoard.boardArray)
+        if(gameBoard.boardArray[0] == 1){
+          checkTurn();
+          gameBoard.boardArray[0] = playerTurn;
+          console.log(gameBoard.boardArray)
+      } 
          break;
        case "square-two":
-         gameBoard.boardArray[1] = playerTurn;
-                     console.log(gameBoard.boardArray)
+        if(gameBoard.boardArray[1] == 2){
+          checkTurn();
+          gameBoard.boardArray[1] = playerTurn;
+          console.log(gameBoard.boardArray)
+      } 
          break;
        case "square-three":
-         gameBoard.boardArray[2] = playerTurn;
-                     console.log(gameBoard.boardArray)
+        if(gameBoard.boardArray[2] == 3){
+          checkTurn();
+          gameBoard.boardArray[2] = playerTurn;
+          console.log(gameBoard.boardArray)
+      } 
          break;
        case "square-four":
-         gameBoard.boardArray[3] = playerTurn;
-                     console.log(gameBoard.boardArray)
+        if(gameBoard.boardArray[3] == 4){
+          checkTurn();
+          gameBoard.boardArray[3] = playerTurn;
+          console.log(gameBoard.boardArray)
+      } 
          break;
        case "square-five":
-         gameBoard.boardArray[4] = playerTurn;
-                     console.log(gameBoard.boardArray)
+        if(gameBoard.boardArray[4] == 5){
+          checkTurn();
+          gameBoard.boardArray[4] = playerTurn;
+          console.log(gameBoard.boardArray)
+      }
          break;
        case "square-six":
-         gameBoard.boardArray[5] = playerTurn;
-                     console.log(gameBoard.boardArray)
+        if(gameBoard.boardArray[5] == 6){
+          checkTurn();
+          gameBoard.boardArray[5] = playerTurn;
+          console.log(gameBoard.boardArray)
+      }
          break;
        case "square-seven":
-         gameBoard.boardArray[6] = playerTurn;
-                     console.log(gameBoard.boardArray)
+        if(gameBoard.boardArray[6] == 7){
+          checkTurn();
+          gameBoard.boardArray[6] = playerTurn;
+          console.log(gameBoard.boardArray)
+      }
          break;
        case "square-eight":
-         gameBoard.boardArray[7] = playerTurn;
-                     console.log(gameBoard.boardArray)
+        if(gameBoard.boardArray[7] == 8){
+          checkTurn();
+          gameBoard.boardArray[7] = playerTurn;
+          console.log(gameBoard.boardArray)
+      }
          break;
        case "square-nine":
-         gameBoard.boardArray[8] = playerTurn;
-                     console.log(gameBoard.boardArray)
+        if(gameBoard.boardArray[8] == 9){
+          checkTurn();
+          gameBoard.boardArray[8] = playerTurn;
+          console.log(gameBoard.boardArray)
+      }
          break;
      }   
 
