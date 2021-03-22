@@ -87,9 +87,18 @@ const Player = (value) => {
 };
 
 // player objects with name values
-const playerX = Player("Daisy");
-const playerY = Player("Rick");
-let playerTurn = playerX.value;
+const playerX = Player("X");
+const playerY = Player("O");
+let playerTurn = playerY.value;
+
+// change player turn
+function checkTurn() {
+  if(playerTurn == playerX.value) {
+    playerTurn = playerY.value;
+  } else if(playerTurn == playerY.value) {
+    playerTurn = playerX.value;
+  }
+}
 
 
 // change boardArrayValue
@@ -98,12 +107,8 @@ changeBoardArrayValue.addEventListener("click", placeMarker);
 
 
 function placeMarker(e) {
-  // change player turn
-  if(playerTurn == playerX.value) {
-    playerTurn = playerY.value;
-  } else if(playerTurn == playerY.value) {
-    playerTurn = playerX.value;
-  }
+  // check player turn
+  checkTurn();
   // need to not allow multiple selections on the same square
   
   switch(e.target.id) {
@@ -148,20 +153,3 @@ function placeMarker(e) {
      }   
 
     }
-
-
-
-
-
-
-// playerX.playerChooseSquare();
-
-//if turn 1 daisy 
-// if turn 2 rick
-// can only place name on empty space
-// 3 in a row wins
-
-// conditions
-// odd number turn/empty/daisy
-// even number turn/empty/rick
-// check for winnin condition
