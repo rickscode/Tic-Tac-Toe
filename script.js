@@ -113,7 +113,7 @@ function placeMarker(e) {
           
           gameBoard.boardArray[0] = playerTurn;
           e.target.textContent = gameBoard.boardArray[0]
-          console.log(gameBoard.boardArray)
+          
       } 
          break;
        case "square-two":
@@ -121,7 +121,7 @@ function placeMarker(e) {
           
           gameBoard.boardArray[1] = playerTurn;
           e.target.textContent = gameBoard.boardArray[1]
-          console.log(gameBoard.boardArray)
+          
       } 
          break;
        case "square-three":
@@ -129,7 +129,7 @@ function placeMarker(e) {
           
           gameBoard.boardArray[2] = playerTurn;
           e.target.textContent = gameBoard.boardArray[2]
-          console.log(gameBoard.boardArray)
+          
       } 
          break;
        case "square-four":
@@ -137,14 +137,14 @@ function placeMarker(e) {
           
           gameBoard.boardArray[3] = playerTurn;
           e.target.textContent = gameBoard.boardArray[3]
-          console.log(gameBoard.boardArray)
+          
       } 
          break;
        case "square-five":
         if(gameBoard.boardArray[4] == 5){
           gameBoard.boardArray[4] = playerTurn;
           e.target.textContent = gameBoard.boardArray[4]
-          console.log(gameBoard.boardArray)
+          
       }
          break;
        case "square-six":
@@ -152,7 +152,7 @@ function placeMarker(e) {
           
           gameBoard.boardArray[5] = playerTurn;
           e.target.textContent = gameBoard.boardArray[5]
-          console.log(gameBoard.boardArray)
+          
       }
          break;
        case "square-seven":
@@ -160,7 +160,7 @@ function placeMarker(e) {
           
           gameBoard.boardArray[6] = playerTurn;
           e.target.textContent = gameBoard.boardArray[6]
-          console.log(gameBoard.boardArray)
+          
       }
          break;
        case "square-eight":
@@ -168,7 +168,7 @@ function placeMarker(e) {
           
           gameBoard.boardArray[7] = playerTurn;
           e.target.textContent = gameBoard.boardArray[7]
-          console.log(gameBoard.boardArray)
+          
       }
          break;
        case "square-nine":
@@ -176,7 +176,7 @@ function placeMarker(e) {
           
           gameBoard.boardArray[8] = playerTurn;
           e.target.textContent = gameBoard.boardArray[8]
-          console.log(gameBoard.boardArray)
+          
       }
          break;
      }   
